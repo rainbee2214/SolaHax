@@ -2,7 +2,7 @@ import Ember from 'ember';
 import PostCode from '../objects/postalcode';
 
 export default Ember.Service.extend({
-  allPostalCodes: [
+  all: [
     "B0J",
     "B2R",
     "B2S",
@@ -35,10 +35,10 @@ export default Ember.Service.extend({
   },
 
   mockPostalCodes: function(){
-    var allPostalCodes = this.get('allPostalCodes');
+    var all = this.get('all');
     var postalCodeArea = this.get('postalCodeArea');
 
-    allPostalCodes.forEach(function(code){
+    all.forEach(function(code){
       var c = new PostCode(
         code,
         45,

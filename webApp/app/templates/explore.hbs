@@ -1,6 +1,8 @@
 <div class="left">
   <div class="filter">
-    <h5>Filtration</h5>
+    {{#each PostalCode.all as |code|}}
+      {{code}}
+    {{/each}}
   </div>
   <div class="map-details">
     {{!-- <h5>Map Details</h5> --}}
