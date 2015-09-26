@@ -33,10 +33,9 @@ def parse_HouseData():
 		waterConsumption.append(d[11])
 		electricityConsumption.append(d[12])
 
-	idsSet = set(ids)
-	for p in ids:
+	postalCodesSet = set(postalCodes)
+	for p in postalCodesSet:
 		print (p)
-	print(len(ids) == len(idsSet))
 
 def parse_ReadingData():
 	f = csv.reader(open("data/reading.csv"))
@@ -110,6 +109,6 @@ def parse_ReadingData():
 	# 	dates.append(d[26])
 	# 	times.append(d[27])
 
-# parse_HouseData()
-parse_ReadingData()
+parse_HouseData()
+# parse_ReadingData()
 
