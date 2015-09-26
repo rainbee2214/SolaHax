@@ -42,7 +42,17 @@ def getAvgElevation(postalCode):
 def getAvgSavings(postalCode):
 	return 100
 def getAvgHouseSize (postalCode):
-	return 1200
+	totalSize = 0
+	totalHouses = 1
+	for i in range (0, len(sizeOfHomes)):
+		# if the house belongs to the postal code
+		if postalCodesOriginal[i] == postalCode:
+			if sizeOfHomes[i] != 'NULL':
+				totalSize += float(sizeOfHomes[i])
+				totalHouses += 1
+		
+	return totalSize/totalHouses
+
 def getAvgAge(postalCode):
 	totalAge = 0
 	totalHouses = 1
@@ -104,11 +114,70 @@ def getAvgWaterConsumption(postalCode):
 	return totalWaterConsumption/totalHouses
 
 def getMostCommonConventionalSystem(postalCode):
-	return "CS System"
+	type1 = "Oil"
+	type2 = "Electricity, 40 IG tank, 3000 W"
+	type3 = "Electricity, 60 IG tank, 4500 W"
+	type1Count, type2Count, type3Count = 0,0,0
+
+	for i in range (0, len(conventionalSystems)):
+		if postalCodesOriginal[i] == postalCode:
+			if conventionalSystems[i] == type1:
+				type1Count += 1
+			elif conventionalSystems[i] == type2:
+				type2Count += 1
+			elif conventionalSystems[i] == type3:
+				type3Count += 1
+
+	if (type1Count > type2Count and type1Count > type3Count):
+		return type1
+	elif (type2Count > type1Count and type2Count > type3Count):
+		return type2
+	else:
+		return type3
+
 def getMostCommonSolarSystem(postalCode):
-	return "Solar System"
+	type1 = "SB32"
+	type2 = "SB64"
+	type1Count, type2Count = 0,0
+
+	for i in range (0, len(solarSystems)):
+		if postalCodesOriginal[i] == postalCode:
+			if solarSystems[i] == type1:
+				type1Count += 1
+			elif solarSystems[i] == type2:
+				type2Count += 1
+
+	if type1Count > type2Count:
+		return type1
+	else:
+		return type2
+
 def getMostCommonInstallationType(postalCode):
-	return "IL Type"
+	type1 = "Flush mount"
+	type2 = "Tilted up"
+	type3 = "Flat roof"
+	type4 = "Wall mount"
+	type1Count, type2Count, type3Count, type4Count = 0,0,0,0
+
+	for i in range (0, len(installationTypes)):
+		if postalCodesOriginal[i] == postalCode:
+			if installationTypes[i] == type1:
+				type1Count += 1
+			elif installationTypes[i] == type2:
+				type2Count += 1
+			elif installationTypes[i] == type3:
+				type3Count += 1
+			elif installationTypes[i] == type4:
+				type4Count += 1
+
+	if (type1Count > type2Count and type1Count > type3Count and type1Count > type4Count):
+		return type1
+	elif (type2Count > type1Count and type2Count > type3Count and type2Count > type4Count):
+		return type2
+	elif (type3Count > type1Count and type3Count > type2Count and type3Count > type4Count):
+		return type3
+	else:
+		return type4
 
 postalCodesSet = set(postalCodesOriginal)
 postalCodes = list(postalCodesSet)
