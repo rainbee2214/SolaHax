@@ -17,10 +17,8 @@ postalCodeCount = 0
 for line in p:
 	# print(line[0])
 	if ((re.search(pattern, line[0]) and re.search(provincePattern, line[4]))):
-		print(line)
 		postalCodeCount += 1
-		print(postalCodeCount)
-		w.writerow(line)
+		w.writerow([line[0], line[1], line[2]])
 
 print(postalCodeCount, 'Postal Codes Found!')
 	
