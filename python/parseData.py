@@ -43,6 +43,8 @@ def parse_HouseData():
 			print (p)
 			f.write(p)
 			f.write("\n")
+				
+
 
 def parse_ReadingData():
 	f = csv.reader(open("data/reading.csv"))
