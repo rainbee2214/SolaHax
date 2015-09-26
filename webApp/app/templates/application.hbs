@@ -1,0 +1,12 @@
+<div class="two-pane-app">
+    <div class="top">
+        <h1 class="title">SolaHax</h1>
+        <ul class="nav-list">
+            {{#link-to 'explore' tagName="li"}}Geo Map{{/link-to}}
+            {{#link-to 'plan' tagName="li"}}Charts{{/link-to}}
+        </ul>
+    </div>
+    <div class="bottom">
+        {{outlet}}
+    </div>
+</div>
