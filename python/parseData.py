@@ -38,12 +38,24 @@ def parse_HouseData():
 	postalCodes.sort()
 	del postalCodes[-1]
 
-	with open('data/hrmGeneralPostalCodes.txt', 'w') as f:
-		for p in postalCodes:
-			print (p)
-			f.write(p)
-			f.write("\n")
-				
+	print ("----")
+	for p in set(installationTypes):
+		print(p)
+
+	print ("----")
+	for p in set(solarSystems):
+		print(p)
+
+	print ("----")
+	for p in set(conventionalSystems):
+		print(p)
+
+	# with open('data/hrmGeneralPostalCodes.txt', 'w') as f:
+	# 	for p in postalCodes:
+	# 		print (p)
+	# 		f.write(p)
+	# 		f.write("\n")
+
 
 
 def parse_ReadingData():

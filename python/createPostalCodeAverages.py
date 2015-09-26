@@ -80,9 +80,29 @@ def getAvgAzimuth(postalCode):
 	return totalAzimuth/totalHouses
 
 def getAvgElectricityConsumption(postalCode):
-	return 100
+	totalElectricityConsumption = 0
+	totalHouses = 1
+	for i in range (0, len(electricityConsumption)):
+		# if the house belongs to the postal code
+		if postalCodesOriginal[i] == postalCode:
+			if electricityConsumption[i] != 'NULL':
+				totalElectricityConsumption += float(electricityConsumption[i])
+				totalHouses += 1
+		
+	return totalElectricityConsumption/totalHouses
+
 def getAvgWaterConsumption(postalCode):
-	return 70
+	totalWaterConsumption = 0
+	totalHouses = 1
+	for i in range (0, len(waterConsumption)):
+		# if the house belongs to the postal code
+		if postalCodesOriginal[i] == postalCode:
+			if waterConsumption[i] != 'NULL':
+				totalWaterConsumption += float(waterConsumption[i])
+				totalHouses += 1
+		
+	return totalWaterConsumption/totalHouses
+
 def getMostCommonConventionalSystem(postalCode):
 	return "CS System"
 def getMostCommonSolarSystem(postalCode):
