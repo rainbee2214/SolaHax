@@ -31,86 +31,126 @@ for d in data:
 	waterConsumption.append(d[11])
 	electricityConsumption.append(d[12])
 
+
+g = csv.reader(open("data/hrmPostalCodes.csv"))
+gData = []
+allPostalCodes = []
+allLatitudes = []
+allLongtitudes = []
+
+for g1 in g:
+	gData.append(g1)
+
+for d in gData:
+	allPostalCodes.append(d[0])
+	allLatitudes.append(d[1])
+	allLongtitudes.append(d[2])
+
 def getAvgLat(postalCode):
 	# get a list of latitudes
-	return 42
+	totalLatitude = 0
+	totalCodes = 0
+
+	for i in range(0, len(allPostalCodes)):
+		if (allPostalCodes[i][0:3] == postalCode):
+			totalLatitude += float(allLatitudes[i]);
+			totalCodes += 1
+	if totalCodes == 0:
+		totalCodes = 1
+	return totalLatitude/totalCodes
 
 def getAvgLong(postalCode):
-	return -63
+	totalLongtitude = 0
+	totalCodes = 0
+
+	for i in range(0, len(allPostalCodes)):
+		if (allPostalCodes[i][0:3] == postalCode):
+			totalLongtitude += float(allLongtitudes[i]);
+			totalCodes += 1
+	if totalCodes == 0:
+		totalCodes = 1
+	return totalLongtitude/totalCodes
+
 def getAvgElevation(postalCode):
 	return 20
 def getAvgSavings(postalCode):
 	return 100
 def getAvgHouseSize (postalCode):
 	totalSize = 0
-	totalHouses = 1
+	totalHouses = 0
 	for i in range (0, len(sizeOfHomes)):
 		# if the house belongs to the postal code
 		if postalCodesOriginal[i] == postalCode:
 			if sizeOfHomes[i] != 'NULL':
 				totalSize += float(sizeOfHomes[i])
 				totalHouses += 1
-		
+	if totalHouses == 0:
+		totalHouses = 1
 	return totalSize/totalHouses
 
 def getAvgAge(postalCode):
 	totalAge = 0
-	totalHouses = 1
+	totalHouses = 0
 	for i in range (0, len(ageOfHomes)):
 		# if the house belongs to the postal code
 		if postalCodesOriginal[i] == postalCode:
 			if (ageOfHomes[i] != 'NULL' and ageOfHomes[i] != 'Age_Of_Home'):
 				totalAge += float(ageOfHomes[i])
 				totalHouses += 1
-		
+	if totalHouses == 0:
+		totalHouses = 1	
 	return totalAge/totalHouses
 
 def getAvgRoofPitch(postalCode):
 	totalPitch = 0
-	totalHouses = 1
+	totalHouses = 0
 	for i in range (0, len(roofPitches)):
 		# if the house belongs to the postal code
 		if postalCodesOriginal[i] == postalCode:
 			if roofPitches[i] != 'NULL':
 				totalPitch += float(roofPitches[i])
 				totalHouses += 1
-		
+	if totalHouses == 0:
+		totalHouses = 1	
 	return totalPitch/totalHouses
 
 def getAvgAzimuth(postalCode):
 	totalAzimuth = 0
-	totalHouses = 1
+	totalHouses = 0
 	for i in range (0, len(azimuths)):
 		# if the house belongs to the postal code
 		if postalCodesOriginal[i] == postalCode:
 			if azimuths[i] != 'NULL':
 				totalAzimuth += float(azimuths[i])
 				totalHouses += 1
-		
+	if totalHouses == 0:
+		totalHouses = 1	
 	return totalAzimuth/totalHouses
 
 def getAvgElectricityConsumption(postalCode):
 	totalElectricityConsumption = 0
-	totalHouses = 1
+	totalHouses = 0
 	for i in range (0, len(electricityConsumption)):
 		# if the house belongs to the postal code
 		if postalCodesOriginal[i] == postalCode:
 			if electricityConsumption[i] != 'NULL':
 				totalElectricityConsumption += float(electricityConsumption[i])
 				totalHouses += 1
-		
+	if totalHouses == 0:
+		totalHouses = 1	
 	return totalElectricityConsumption/totalHouses
 
 def getAvgWaterConsumption(postalCode):
 	totalWaterConsumption = 0
-	totalHouses = 1
+	totalHouses = 0
 	for i in range (0, len(waterConsumption)):
 		# if the house belongs to the postal code
 		if postalCodesOriginal[i] == postalCode:
 			if waterConsumption[i] != 'NULL':
 				totalWaterConsumption += float(waterConsumption[i])
 				totalHouses += 1
-		
+	if totalHouses == 0:
+		totalHouses = 1	
 	return totalWaterConsumption/totalHouses
 
 def getMostCommonConventionalSystem(postalCode):
