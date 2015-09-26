@@ -8,7 +8,10 @@ provincePattern = 'NS'
 r = re.search(pattern, string)
 
 postalCodeFile = open('data/zipcodeset.txt', 'r')
+newPostalCodeFile = open('data/hrmPostalCodes.txt', 'w')
+
 p = csv.reader(postalCodeFile)
+w = csv.writer(newPostalCodeFile)
 
 postalCodeCount = 0
 for line in p:
@@ -17,6 +20,7 @@ for line in p:
 		print(line)
 		postalCodeCount += 1
 		print(postalCodeCount)
+		w.writerow(line)
 
 print(postalCodeCount, 'Postal Codes Found!')
 	

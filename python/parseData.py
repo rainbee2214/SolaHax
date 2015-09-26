@@ -34,8 +34,15 @@ def parse_HouseData():
 		electricityConsumption.append(d[12])
 
 	postalCodesSet = set(postalCodes)
-	for p in postalCodesSet:
-		print (p)
+	postalCodes = list(postalCodesSet)
+	postalCodes.sort()
+	del postalCodes[-1]
+
+	with open('data/hrmGeneralPostalCodes.txt', 'w') as f:
+		for p in postalCodes:
+			print (p)
+			f.write(p)
+			f.write("\n")
 
 def parse_ReadingData():
 	f = csv.reader(open("data/reading.csv"))
