@@ -1,4 +1,5 @@
 import csv
+import csv
 
 f = csv.reader(open("data/home.csv"))
 data = []
@@ -45,6 +46,13 @@ for d in gData:
 	allPostalCodes.append(d[0])
 	allLatitudes.append(d[1])
 	allLongtitudes.append(d[2])
+
+def getNumberOfHouses(postalCode):
+	totalHouses = 0
+	for i in range (0, len(ids)):
+		if postalCodesOriginal[i] == postalCode:
+				totalHouses += 1
+	return totalHouses
 
 def getAvgLat(postalCode):
 	# get a list of latitudes
@@ -225,7 +233,7 @@ postalCodes.sort()
 del postalCodes[-1]
 
 
-f1 = open('data/hrmGeneralPostalCodes.txt', 'w')
+f1 = open('data/hrmGeneralPostalCodes.csv', 'w')
 f = csv.writer(f1)
 
 avgLat = 42
@@ -243,6 +251,7 @@ mostCommonSolarSystem = "Solar System"
 mostCommonInstallationType = "IL Type"
 
 for p in postalCodes:
+	numberOfHouses = getNumberOfHouses(p)
 	avgLat = getAvgLat(p)
 	avgLong = getAvgLong(p)
 	avgElevation = getAvgElevation(p)
@@ -257,7 +266,7 @@ for p in postalCodes:
 	mostCommonSolarSystem = getMostCommonSolarSystem(p)
 	mostCommonInstallationType = getMostCommonInstallationType(p)
 
-	f.writerow([p, avgLat, avgLong, avgElevation, avgSavings, avgHouseSize, avgAge, avgRoofPitch, avgAzimuth, avgElectricityConsumption, avgWaterConsumption, mostCommonConventionalSystem, mostCommonSolarSystem, mostCommonInstallationType])
+	f.writerow([p, numberOfHouses, avgLat, avgLong, avgElevation, avgSavings, avgHouseSize, avgAge, avgRoofPitch, avgAzimuth, avgElectricityConsumption, avgWaterConsumption, mostCommonConventionalSystem, mostCommonSolarSystem, mostCommonInstallationType])
 
 
 f1.close()
