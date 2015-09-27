@@ -3,6 +3,6 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   initChart: function(){
     //d3 setup goes here
-    console.log('making pie chart');
+    console.log('making pie chart for id', this.elementId);
   }.on('didInsertElement'),
 });
