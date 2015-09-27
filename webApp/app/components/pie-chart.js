@@ -5,8 +5,8 @@ export default Ember.Component.extend({
     //d3 setup goes here
     console.log('making pie chart for id', this.elementId);
 
-    var width = 960,
-        height = 500,
+    var width = 300,
+        height = 200,
         radius = Math.min(width, height) / 2;
 
     var color = d3.scale.ordinal()
