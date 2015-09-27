@@ -88,11 +88,14 @@ export default Ember.Component.extend({
         self.set('houseMarkers', houseMarkers);
 
         // Place the postal code circles, then save the property
+        console.log(this.PostalCode.get('postalCodeArea'));
         this.PostalCode.get('postalCodeArea').forEach(function(postCode){
+            console.log('postcode', postCode, postCode.get('lat'), postCode.get('lng'), postCode.get('code'));
             var options = _.clone(defaultCircleOptions);
-            options.center = new google.maps.LatLng(postCode.get('lat') + (Math.random() * 0.02), postCode.get('lng') + (Math.random() * 0.02));
+            options.center = new google.maps.LatLng(postCode.get('lat'), postCode.get('lng'));
             options.map = map;
             options.postalCode = postCode.get('code');
+            console.log(options);
             var postalCircle = new google.maps.Circle(options);
 
             postalCircle.addListener('click', function(){
