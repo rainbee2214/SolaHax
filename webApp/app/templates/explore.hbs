@@ -1,56 +1,95 @@
 <div class="left">
   <div class="filter">
-    {{#each PostalCode.all as |code|}}
-      {{code}}
-    {{/each}}
+
+    <div class="grid">
+        <label>
+            {{!-- <button>
+                Select{{#if allSelected}} All{{else}} None{{/if}}
+            </button> --}}
+            <div class="button-group">
+                <a class="button">All</a>
+                <a class="button">None</a>
+            </div>
+            {{!-- <button class="button">All</button>
+            <button class="button">None</button> --}}
+        </label>
+        <label>{{input type="checkbox" checked=b0jChecked}} B0J</label>
+        <label>{{input type="checkbox" checked=b2rChecked}} B2R</label>
+        <label>{{input type="checkbox" checked=b2sChecked}} B2S</label>
+        <label>{{input type="checkbox" checked=b2tChecked}} B2T</label>
+        <label>{{input type="checkbox" checked=b2wChecked}} B2W</label>
+        <label>{{input type="checkbox" checked=b2xChecked}} B2X</label>
+        <label>{{input type="checkbox" checked=b2yChecked}} B2Y</label>
+        <label>{{input type="checkbox" checked=b2zChecked}} B2Z</label>
+        <label>{{input type="checkbox" checked=b3aChecked}} B3A</label>
+        <label>{{input type="checkbox" checked=b3eChecked}} B3E</label>
+        <label>{{input type="checkbox" checked=b3hChecked}} B3H</label>
+        <label>{{input type="checkbox" checked=b3kChecked}} B3K</label>
+        <label>{{input type="checkbox" checked=b3lChecked}} B3L</label>
+        <label>{{input type="checkbox" checked=b3mChecked}} B3M</label>
+        <label>{{input type="checkbox" checked=b3nChecked}} B3N</label>
+        <label>{{input type="checkbox" checked=b3sChecked}} B3S</label>
+        <label>{{input type="checkbox" checked=b3tChecked}} B3T</label>
+        <label>{{input type="checkbox" checked=b3vChecked}} B3V</label>
+        <label>{{input type="checkbox" checked=b4aChecked}} B4A</label>
+        <label>{{input type="checkbox" checked=b4bChecked}} B4B</label>
+        <label>{{input type="checkbox" checked=b4cChecked}} B4C</label>
+        <label>{{input type="checkbox" checked=b4eChecked}} B4E</label>
+        <label>{{input type="checkbox" checked=b4gChecked}} B4G</label>
+        <div class="break"></div>
+    </div>
   </div>
   <div class="map-details">
     {{!-- <h5>Map Details</h5> --}}
     {{#unless somethingSelected}}
       <div class="select-warn-box">
         <div class="inner">
-          Select a house or postal code for details
+            Select a house or postal code for details
         </div>
       </div>
     {{/unless}}
-    {{#if activePostalCode}}
-      <div class="details">
-        <p><strong>Postal Code</strong> {{activePostalCode.code}}</p>
-        <p><strong>Average Elevation</strong> {{activePostalCode.avgElevation}}</p>
-        <p><strong>Average Savings</strong> ${{activePostalCode.avgSavings}}</p>
-        <p><strong>Average Solar Power</strong> {{activePostalCode.avgSolarPower}}</p>
-        <p><strong>Average House Size</strong> {{activePostalCode.avgHouseSize}} sqr ft</p>
-        <p><strong>Average House Age</strong> {{activePostalCode.avgAge}} years</p>
-        <p><strong>Average Roof Pitch</strong> {{activePostalCode.avgRoofPitch}}</p>
-        <p><strong>Average Azimuth</strong> {{activePostalCode.avgAzimuth}} degrees</p>
-        <p><strong>Average Electricity Consumption</strong> {{activePostalCode.avgElectricityConsumption}}</p>
-        <p><strong>Average Water Consumption</strong> {{activePostalCode.avgWaterConsumption}}</p>
-        <p><strong>Most Common Conventional System</strong> {{activePostalCode.mostCommonConventionalSystem}}</p>
-        <p><strong>Most Common Solar System</strong> {{activePostalCode.mostCommonSolarSystem}}</p>
-        <p><strong>Most Common Installation Type</strong> {{activePostalCode.mostCommonInstallationType}}</p>
-      </div>
-    {{/if}}
+
     {{#if activeHouse}}
-      <div class="details">
         <div class="details">
-          <p><strong>ID</strong> {{activeHouse.id}}</p>
-          <p><strong>Elevation</strong> {{activeHouse.elevation}}</p>
-          <p><strong>Size</strong> {{activeHouse.size}} sqr ft</p>
-          <p><strong>Age</strong> {{activeHouse.age}} years</p>
-          <p><strong>Roof Pitch</strong> {{activeHouse.roofPitch}}</p>
-          <p><strong>Azimuth</strong> {{activeHouse.azimuth}} degrees</p>
-          <p><strong>Average Solar Power</strong> {{activeHouse.avgSolarPower}}</p>
-          <p><strong>Electricity Consumption</strong> {{activeHouse.electricityConsumption}}</p>
-          <p><strong>Water Consumption</strong> {{activeHouse.waterConsumption}}</p>
-          <p><strong>Conventional System</strong> {{activeHouse.conventionalSystem}}</p>
-          <p><strong>Solar System</strong> {{activeHouse.systemType}}</p>
-          <p><strong>Installation Type</strong> {{activeHouse.installationType}}</p>
+            <div class="details">
+                <h3>House Details</h3>
+                <p><strong>ID</strong> {{activeHouse.id}}</p>
+                <p><strong>Elevation</strong> {{activeHouse.elevation}}</p>
+                <p><strong>Size</strong> {{activeHouse.size}} sqr ft</p>
+                <p><strong>Age</strong> {{activeHouse.age}} years</p>
+                <p><strong>Roof Pitch</strong> {{activeHouse.roofPitch}}</p>
+                <p><strong>Azimuth</strong> {{activeHouse.azimuth}} degrees</p>
+                <p><strong>Average Solar Power</strong> {{activeHouse.avgSolarPower}}</p>
+                <p><strong>Electricity Consumption</strong> {{activeHouse.electricityConsumption}}</p>
+                <p><strong>Water Consumption</strong> {{activeHouse.waterConsumption}}</p>
+                <p><strong>Conventional System</strong> {{activeHouse.conventionalSystem}}</p>
+                <p><strong>Solar System</strong> {{activeHouse.systemType}}</p>
+                <p><strong>Installation Type</strong> {{activeHouse.installationType}}</p>
+            </div>
         </div>
-      </div>
-    {{/if}}
+    {{/if}} {{!-- activeHouse --}}
+
+    {{#if activePostalCode}}
+        <div class="details">
+            <h3>Area Details</h3>
+            <p><strong>Postal Code</strong> {{activePostalCode.code}}</p>
+            <p><strong>Average Elevation</strong> {{activePostalCode.avgElevation}}</p>
+            <p><strong>Average Savings</strong> ${{activePostalCode.avgSavings}}</p>
+            <p><strong>Average Solar Power</strong> {{activePostalCode.avgSolarPower}}</p>
+            <p><strong>Average House Size</strong> {{activePostalCode.avgHouseSize}} sqr ft</p>
+            <p><strong>Average House Age</strong> {{activePostalCode.avgAge}} years</p>
+            <p><strong>Average Roof Pitch</strong> {{activePostalCode.avgRoofPitch}}</p>
+            <p><strong>Average Azimuth</strong> {{activePostalCode.avgAzimuth}} degrees</p>
+            <p><strong>Average Electricity Consumption</strong> {{activePostalCode.avgElectricityConsumption}}</p>
+            <p><strong>Average Water Consumption</strong> {{activePostalCode.avgWaterConsumption}}</p>
+            <p><strong>Most Common Conventional System</strong> {{activePostalCode.mostCommonConventionalSystem}}</p>
+            <p><strong>Most Common Solar System</strong> {{activePostalCode.mostCommonSolarSystem}}</p>
+            <p><strong>Most Common Installation Type</strong> {{activePostalCode.mostCommonInstallationType}}</p>
+        </div>
+    {{/if}} {{!-- activePostalCode --}}
   </div>
 </div>
 
 <div class="right">
-    {{google-map}}
+    {{google-map target=controller activeHouse=activeHouse}}
 </div>

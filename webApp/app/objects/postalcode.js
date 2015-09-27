@@ -1,9 +1,9 @@
 import Ember from 'ember'
 export default Ember.Object.extend({
-  init: function(code, lng, lat, avgElevation, avgSavings, avgSolarPower, avgHouseSize, avgAge, avgRoofPitch, avgAzimuth, avgElectricityConsumption, avgWaterConsumption, mostCommonConventionalSystem, mostCommonSolarSystem, mostCommonInstallationType, elevations){
+  init: function(code, lat, lng, avgElevation, avgSavings, avgSolarPower, avgHouseSize, avgAge, avgRoofPitch, avgAzimuth, avgElectricityConsumption, avgWaterConsumption, mostCommonConventionalSystem, mostCommonSolarSystem, mostCommonInstallationType, elevations){
     this.set('code', code);
-    this.set('lng', lng);
     this.set('lat', lat);
+    this.set('lng', lng);
     this.set('avgElevation', avgElevation);
     this.set('avgSavings', avgSavings);
     this.set('avgSolarPower', avgSolarPower);
