@@ -257,7 +257,7 @@ export default Ember.Service.extend({
     var hData = [
       {
         "id": "WEL0754",
-        "postalcode": "B3E",
+        "PostalCode": "B3E",
         "daysinuse": 366,
         "avgpowerperday": 551264.3330327878,
         "avgpowerperminute": 879.534408480023,
@@ -269,7 +269,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0755",
-        "postalcode": "B3M",
+        "PostalCode": "B3M",
         "daysinuse": 396,
         "avgpowerperday": 460902.13151515153,
         "avgpowerperminute": 766.0220640970475,
@@ -281,7 +281,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0756",
-        "postalcode": "B3T",
+        "PostalCode": "B3T",
         "daysinuse": 505,
         "avgpowerperday": 862270.0087128713,
         "avgpowerperminute": 1294.8939710902118,
@@ -293,7 +293,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0769",
-        "postalcode": "B2W",
+        "PostalCode": "B2W",
         "daysinuse": 280,
         "avgpowerperday": 969509.6436428572,
         "avgpowerperminute": 1486.9250429059323,
@@ -305,7 +305,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0770",
-        "postalcode": "B3K",
+        "PostalCode": "B3K",
         "daysinuse": 496,
         "avgpowerperday": 1322571.0221370978,
         "avgpowerperminute": 1954.164223334686,
@@ -318,7 +318,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0771",
-        "postalcode": "B2T",
+        "PostalCode": "B2T",
         "daysinuse": 540,
         "avgpowerperday": 538152.8025555557,
         "avgpowerperminute": 867.3200577316497,
@@ -330,7 +330,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0773",
-        "postalcode": "B4E",
+        "PostalCode": "B4E",
         "daysinuse": 510,
         "avgpowerperday": 490982.1772352953,
         "avgpowerperminute": 793.1367411438996,
@@ -342,7 +342,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0774",
-        "postalcode": "B3K",
+        "PostalCode": "B3K",
         "daysinuse": 554,
         "avgpowerperday": 502752.39395306923,
         "avgpowerperminute": 799.1380127859962,
@@ -354,7 +354,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0775",
-        "postalcode": "B3M",
+        "PostalCode": "B3M",
         "daysinuse": 534,
         "avgpowerperday": 353886.379662922,
         "avgpowerperminute": 574.2023071663423,
@@ -366,7 +366,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0776",
-        "postalcode": "B3S",
+        "PostalCode": "B3S",
         "daysinuse": 492,
         "avgpowerperday": 793844.4314634141,
         "avgpowerperminute": 1346.5017484958864,
@@ -378,7 +378,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0777",
-        "postalcode": "B2S",
+        "PostalCode": "B2S",
         "daysinuse": 508,
         "avgpowerperday": 306775.12748031504,
         "avgpowerperminute": 575.5826920874899,
@@ -390,7 +390,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0791",
-        "postalcode": "B2X",
+        "PostalCode": "B2X",
         "daysinuse": 525,
         "avgpowerperday": 853353.8265142876,
         "avgpowerperminute": 1267.3691178460201,
@@ -402,7 +402,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0792",
-        "postalcode": "B3A",
+        "PostalCode": "B3A",
         "daysinuse": 418,
         "avgpowerperday": 369419.2715311003,
         "avgpowerperminute": 691.6409448891267,
@@ -414,7 +414,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0793",
-        "postalcode": "B2W",
+        "PostalCode": "B2W",
         "daysinuse": 520,
         "avgpowerperday": 322658.9522307703,
         "avgpowerperminute": 2520.83540696592,
@@ -426,7 +426,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0794",
-        "postalcode": "B3L",
+        "PostalCode": "B3L",
         "daysinuse": 505,
         "avgpowerperday": 1116344.515366337,
         "avgpowerperminute": 1711.5504975707854,
@@ -438,7 +438,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0795",
-        "postalcode": "B2Y",
+        "PostalCode": "B2Y",
         "daysinuse": 526,
         "avgpowerperday": 363647.54560836527,
         "avgpowerperminute": 992.4422190384342,
@@ -450,7 +450,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0798",
-        "postalcode": "B4B",
+        "PostalCode": "B4B",
         "daysinuse": 503,
         "avgpowerperday": 784186.7810337918,
         "avgpowerperminute": 2038.8270633170637,
@@ -462,7 +462,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0799",
-        "postalcode": "B3N",
+        "PostalCode": "B3N",
         "daysinuse": 513,
         "avgpowerperday": 906125.9608187136,
         "avgpowerperminute": 1419.1370239031257,
@@ -474,7 +474,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0800",
-        "postalcode": "B4G",
+        "PostalCode": "B4G",
         "daysinuse": 514,
         "avgpowerperday": 450778.8517704282,
         "avgpowerperminute": 700.0490230008115,
@@ -486,7 +486,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0801",
-        "postalcode": "B2T",
+        "PostalCode": "B2T",
         "daysinuse": 511,
         "avgpowerperday": 1191983.9812133086,
         "avgpowerperminute": 1747.2033897677115,
@@ -498,7 +498,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0802",
-        "postalcode": "B0J",
+        "PostalCode": "B0J",
         "daysinuse": 502,
         "avgpowerperday": 597202.5489442233,
         "avgpowerperminute": 951.7296723801717,
@@ -510,7 +510,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0803",
-        "postalcode": "B4A",
+        "PostalCode": "B4A",
         "daysinuse": 158,
         "avgpowerperday": 848908.9959493678,
         "avgpowerperminute": 1408.669107619412,
@@ -522,7 +522,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0804",
-        "postalcode": "B3H",
+        "PostalCode": "B3H",
         "daysinuse": 488,
         "avgpowerperday": 1233128.3072950838,
         "avgpowerperminute": 1833.9116062676262,
@@ -534,7 +534,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0805",
-        "postalcode": "B4B",
+        "PostalCode": "B4B",
         "daysinuse": 432,
         "avgpowerperday": 799568.4145833312,
         "avgpowerperminute": 1858.9296725938602,
@@ -546,7 +546,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0806",
-        "postalcode": "B2Z",
+        "PostalCode": "B2Z",
         "daysinuse": 118,
         "avgpowerperday": 515343.64322033833,
         "avgpowerperminute": 2125.8035716848167,
@@ -558,7 +558,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0807",
-        "postalcode": "B3H",
+        "PostalCode": "B3H",
         "daysinuse": 502,
         "avgpowerperday": 1205740.802151394,
         "avgpowerperminute": 1858.6040272522014,
@@ -570,7 +570,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0808",
-        "postalcode": "B4B",
+        "PostalCode": "B4B",
         "daysinuse": 499,
         "avgpowerperday": 1317362.7921042081,
         "avgpowerperminute": 1954.3978855153373,
@@ -582,7 +582,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0809",
-        "postalcode": "B4B",
+        "PostalCode": "B4B",
         "daysinuse": 250,
         "avgpowerperday": 713764.0752000001,
         "avgpowerperminute": 1308.4384679474188,
@@ -594,7 +594,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0810",
-        "postalcode": "B4C",
+        "PostalCode": "B4C",
         "daysinuse": 495,
         "avgpowerperday": 739329.6407272719,
         "avgpowerperminute": 2070.901067746028,
@@ -606,7 +606,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0812",
-        "postalcode": "B4A",
+        "PostalCode": "B4A",
         "daysinuse": 441,
         "avgpowerperday": 1172765.431972789,
         "avgpowerperminute": 1720.5171695168447,
@@ -618,7 +618,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0813",
-        "postalcode": "B3A",
+        "PostalCode": "B3A",
         "daysinuse": 441,
         "avgpowerperday": 1000269.8514285722,
         "avgpowerperminute": 1406.5710402226841,
@@ -630,7 +630,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0814",
-        "postalcode": "B3L",
+        "PostalCode": "B3L",
         "daysinuse": 439,
         "avgpowerperday": 537540.0230979504,
         "avgpowerperminute": 884.4960240115363,
@@ -642,7 +642,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0815",
-        "postalcode": "B2Z",
+        "PostalCode": "B2Z",
         "daysinuse": 402,
         "avgpowerperday": 1292625.5014925369,
         "avgpowerperminute": 1982.3708181956233,
@@ -654,7 +654,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0821",
-        "postalcode": "B2R",
+        "PostalCode": "B2R",
         "daysinuse": 369,
         "avgpowerperday": 1137613.8603252026,
         "avgpowerperminute": 1751.7124060128901,
@@ -666,7 +666,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0822",
-        "postalcode": "B3K",
+        "PostalCode": "B3K",
         "daysinuse": 370,
         "avgpowerperday": 940162.5791351324,
         "avgpowerperminute": 2245.2808315213006,
@@ -678,7 +678,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0823",
-        "postalcode": "B3A",
+        "PostalCode": "B3A",
         "daysinuse": 116,
         "avgpowerperday": 1549045.5765517245,
         "avgpowerperminute": 2101.6815847272524,
@@ -690,7 +690,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0824",
-        "postalcode": "B2W",
+        "PostalCode": "B2W",
         "daysinuse": 269,
         "avgpowerperday": 574523.6413382901,
         "avgpowerperminute": 979.8660114866298,
@@ -702,7 +702,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0825",
-        "postalcode": "B2Z",
+        "PostalCode": "B2Z",
         "daysinuse": 364,
         "avgpowerperday": 1171952.6302747244,
         "avgpowerperminute": 1832.9080637342863,
@@ -714,7 +714,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0846",
-        "postalcode": "B2Y",
+        "PostalCode": "B2Y",
         "daysinuse": 356,
         "avgpowerperday": 693318.0748314597,
         "avgpowerperminute": 1977.0400392317717,
@@ -726,7 +726,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0847",
-        "postalcode": "B3A",
+        "PostalCode": "B3A",
         "daysinuse": 356,
         "avgpowerperday": 1349457.8073033718,
         "avgpowerperminute": 1910.7742896199038,
@@ -738,7 +738,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0848",
-        "postalcode": "B3N",
+        "PostalCode": "B3N",
         "daysinuse": 337,
         "avgpowerperday": 1340670.8460534129,
         "avgpowerperminute": 1944.5428508629543,
@@ -750,7 +750,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0850",
-        "postalcode": "B3K",
+        "PostalCode": "B3K",
         "daysinuse": 252,
         "avgpowerperday": 1317816.4092857144,
         "avgpowerperminute": 1828.8996323995857,
@@ -762,7 +762,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0851",
-        "postalcode": "B3H",
+        "PostalCode": "B3H",
         "daysinuse": 271,
         "avgpowerperday": 880847.4832472327,
         "avgpowerperminute": 1384.6230383767058,
@@ -774,7 +774,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0852",
-        "postalcode": "B3H",
+        "PostalCode": "B3H",
         "daysinuse": 334,
         "avgpowerperday": 378977.1816467071,
         "avgpowerperminute": 758.0646659071795,
@@ -786,7 +786,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0853",
-        "postalcode": "B2S",
+        "PostalCode": "B2S",
         "daysinuse": 330,
         "avgpowerperday": 1105951.0163636366,
         "avgpowerperminute": 1549.2170364353683,
@@ -798,7 +798,7 @@ export default Ember.Service.extend({
       },
       {
         "id": "WEL0854",
-        "postalcode": "B2Y",
+        "PostalCode": "B2Y",
         "daysinuse": 98,
         "avgpowerperday": 674068.7666326535,
         "avgpowerperminute": 957.1271966263383,
