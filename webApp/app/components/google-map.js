@@ -11,7 +11,7 @@ export default Ember.Component.extend({
     postalCodeCircles: [],
 
     defaultMapOptions: {
-        center: new google.maps.LatLng(44.7050000,-63.6789583),
+        center: new google.maps.LatLng(44.650356,-63.613676),
         zoom: 13,
         disableDefaultUI: true
     },
@@ -22,7 +22,7 @@ export default Ember.Component.extend({
         strokeWeight: 2,
         fillColor: "#FF0000",
         fillOpacity: 0.2,
-        radius: 600,
+        radius: 1000,
     },
 
     activeCircleOptions: {
@@ -31,8 +31,45 @@ export default Ember.Component.extend({
         strokeWeight: 2,
         fillColor: "#0000FF",
         fillOpacity: 0.3,
-        radius: 600,
+        radius: 1000,
     },
+
+    updateFilter: function(){
+      var filter = this.get('filter');
+      var houseMarkers = this.get('houseMarkers');
+      var circles = this.get('postalCodeCircles');
+      // Premptively enable
+      for (var key in filter){
+        if (filter[key] == false){
+          // For each marker that matches disable
+          for (var i=0; i< houseMarkers.length; i++){
+            if (houseMarkers[i].postalCode.toLowerCase() == key.toLowerCase()){
+              houseMarkers[i].setVisible(false);
+            }
+          }
+          // For each circle that matches disable
+          for (var i=0; i<circles.length; i++){
+            if (circles[i].postalCode.toLowerCase() == key.toLowerCase()){
+              circles[i].setVisible(false);
+            }
+          }
+        }
+        else {
+          // For each marker that matches enable
+          for (var i=0; i< houseMarkers.length; i++){
+            if (houseMarkers[i].postalCode.toLowerCase() == key.toLowerCase()){
+              houseMarkers[i].setVisible(true);
+            }
+          }
+          // For each circle that matches enable
+          for (var i=0; i<circles.length; i++){
+            if (circles[i].postalCode.toLowerCase() == key.toLowerCase()){
+              circles[i].setVisible(true);
+            }
+          }
+        }
+      }
+    }.observes('filter'),
 
     houseIcon: "assets/house.svg",
     activeHouseIcon: "assets/active-house.svg",
@@ -53,11 +90,11 @@ export default Ember.Component.extend({
 
         // Init the map and heatmap, then save the properties
         var map = new window.google.maps.Map(container, options);
-        var heatmap = new window.google.maps.visualization.HeatmapLayer({
-            data: self.getPoints()
-        });
-        heatmap.setMap(map);
-        self.set('heatmap', heatmap);
+        // var heatmap = new window.google.maps.visualization.HeatmapLayer({
+        //     data: self.getPoints()
+        // });
+        // heatmap.setMap(map);
+        // self.set('heatmap', heatmap);
         self.set('map', map);
 
         // Place the house icons, then save the property
@@ -66,7 +103,8 @@ export default Ember.Component.extend({
                 position: {lat: house.get('lat'), lng: house.get('lng')},
                 map: map,
                 icon: houseIcon,
-                title: "Wel" + house.get('id')
+                title: "Wel" + house.get('id'),
+                postalCode: house.get('postalCode')
             });
 
             marker.addListener('click', function(){
@@ -88,14 +126,11 @@ export default Ember.Component.extend({
         self.set('houseMarkers', houseMarkers);
 
         // Place the postal code circles, then save the property
-        console.log(this.PostalCode.get('postalCodeArea'));
         this.PostalCode.get('postalCodeArea').forEach(function(postCode){
-            console.log('postcode', postCode, postCode.get('lat'), postCode.get('lng'), postCode.get('code'));
             var options = _.clone(defaultCircleOptions);
             options.center = new google.maps.LatLng(postCode.get('lat'), postCode.get('lng'));
             options.map = map;
             options.postalCode = postCode.get('code');
-            console.log(options);
             var postalCircle = new google.maps.Circle(options);
 
             postalCircle.addListener('click', function(){

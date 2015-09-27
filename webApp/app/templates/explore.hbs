@@ -7,8 +7,8 @@
                 Select{{#if allSelected}} All{{else}} None{{/if}}
             </button> --}}
             <div class="button-group flat-group">
-                <a class="button small">All</a>
-                <a class="button small">None</a>
+                <a class="button small" {{action 'filterAll'}}>All</a>
+                <a class="button small" {{action 'filterNone'}}>None</a>
             </div>
             {{!-- <button class="button">All</button>
             <button class="button">None</button> --}}
@@ -73,9 +73,9 @@
         <div class="details">
             <h3>Area Details</h3>
             <p><strong>Postal Code</strong> {{activePostalCode.code}}</p>
-            <p><strong>Average Elevation</strong> {{activePostalCode.avgElevation}}</p>
-            <p><strong>Average Savings</strong> ${{activePostalCode.avgSavings}}</p>
-            <p><strong>Average Solar Power</strong> {{activePostalCode.avgSolarPower}}</p>
+            {{!-- <p><strong>Average Elevation</strong> {{activePostalCode.avgElevation}}</p> --}}
+            {{!-- <p><strong>Average Savings</strong> ${{activePostalCode.avgSavings}}</p> --}}
+            {{!-- <p><strong>Average Solar Power</strong> {{activePostalCode.avgSolarPower}}</p> --}}
             <p><strong>Average House Size</strong> {{activePostalCode.avgHouseSize}} sqr ft</p>
             <p><strong>Average House Age</strong> {{activePostalCode.avgAge}} years</p>
             <p><strong>Average Roof Pitch</strong> {{activePostalCode.avgRoofPitch}}</p>
@@ -91,5 +91,5 @@
 </div>
 
 <div class="right">
-    {{google-map target=controller activeHouse=activeHouse}}
+    {{google-map target=controller activeHouse=activeHouse filter=filterObject}}
 </div>
