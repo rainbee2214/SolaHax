@@ -29,3 +29,4 @@ print ("Data array: " ,len(data), "Data set: ", len(dataSet), "Equal size: ", (l
 # fOut.writerow(data[0])
 
 print("All done with the elevation data!")
+newDatasetFile.close()
