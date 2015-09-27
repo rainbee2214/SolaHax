@@ -1,6 +1,8 @@
 <div id="floating-panel">
-    <button {{action 'toggleHeatmap'}}>Toggle Heightmap</button>
-    <button {{action 'resetMap'}}>Reset</button>
+    <div class="button-group minor-group">
+        <a class="button big" {{action 'toggleHeatmap'}}>Toggle Heightmap</a>
+        <a class="button danger big" {{action 'resetMap'}}>Reset</a>
+    </div>
 </div>
 <div class="map-canvas"></div>
 {{yield}}

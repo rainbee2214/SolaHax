@@ -4,6 +4,7 @@
 
 * {
   font-family: 'Lato', sans-serif;
+  color: #333;
 }
 
 html, body {
@@ -66,8 +67,9 @@ html, body {
 
           label {
               display: inline-block;
-              width: 30%;
+              width: 24%;
               padding: 1%;
+              cursor: pointer;
           }
 
           /* All but the last 3 boxes */
@@ -77,7 +79,7 @@ html, body {
 
           .break {
               display: inline-block;
-              width: 30%;
+              width: 24%;
               height: 0;
           }
         }
@@ -185,5 +187,6 @@ html, body {
     vertical-align: middle;
     text-align: center;
     color: #ccc;
+    font-size: 1.25em;
   }
 }

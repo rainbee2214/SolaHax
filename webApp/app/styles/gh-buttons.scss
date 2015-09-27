@@ -142,6 +142,12 @@
     top: 0;
 }
 
+/* Small Button
+   ========================================================================== */
+
+.button.small {
+    padding: 0.4em 0.55em;
+}
 
 /* =============================================================================
    Button groups
@@ -206,11 +212,19 @@
     background-color: #fff;
 }
 
+.button-group.flat-group .button {
+    background-image: none;
+}
+
+.button-group.flat-group .button:hover,
+.button-group.flat-group .button:focus,
 .button-group.minor-group .button:hover,
 .button-group.minor-group .button:focus {
     background-color: #599bdc;
 }
 
+.button-group.flat-group .button:active,
+.button-group.flat-group .button.active,
 .button-group.minor-group .button:active,
 .button-group.minor-group .button.active {
     background-color: #3072b3;
