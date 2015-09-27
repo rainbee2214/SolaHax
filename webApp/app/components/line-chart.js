@@ -29,13 +29,13 @@ export default Ember.Component.extend({
         .y0(height)
         .y1(function(d) { return y(d.close); });
 
-    var svg = d3.select("body").append("svg")
+    var svg = d3.select("#"+this.elementId).append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
       .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.tsv("data.tsv", function(error, data) {
+    d3.tsv("assets/data.tsv", function(error, data) {
       if (error) throw error;
 
       data.forEach(function(d) {

@@ -16,6 +16,7 @@ export default Ember.Component.extend({
         disableDefaultUI: true
     },
 
+
     defaultCircleOptions: {
         strokeColor: "#FF0000",
         strokeOpacity: 0.8,
@@ -198,6 +199,7 @@ export default Ember.Component.extend({
 
             // Clear any selected postal code and houses in the parent controller
             this.get('target').send('clearSelected');
+            this.get('target').send('filterAll');
         }, //resetMap
     } //actions
 });

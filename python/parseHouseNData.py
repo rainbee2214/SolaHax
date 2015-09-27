@@ -4,6 +4,7 @@ from collections import namedtuple
 homes = {}
 homesConventionalType = {}
 homePostalCodes = {}
+homesInstallationType = {}
 
 inFile = open("data/home.csv")
 inReader = csv.reader(inFile)
@@ -20,6 +21,7 @@ for line in inReader:
 	else:
 		homesConventionalType[line[2]] = 'Electricity'
 	homePostalCodes[line[2]] = line[3]
+	homesInstallationType[line[2]] = line[8]
 
 
 inFile.close()
@@ -99,9 +101,9 @@ for x in range(0, 48):
 			moneySavings = fuelCostElectricity*overallPowerGenerated
 		# print("Total energy in kWh", overallPowerGenerated, "$", moneySavings)
 
-		# print("House:", welId, "Days in use:", len(days),"Average power generated per day", overallPowerGenerated/daysGenerated, "Average power per day generated per minute", overallDayAverages/daysGenerated, 
-			# "Total power generated over time", overallPowerGenerated, "Conventional System Used:", conventionalSystem)
-		houseDataWriter.writerow([welId, homePostalCodes[welId], len(days), overallPowerGenerated/daysGenerated, overallDayAverages/daysGenerated, overallPowerGenerated, conventionalSystem])
+		# print("House:", welId, "Postal Code" "Days in use:", len(days),"Average power generated per day", overallPowerGenerated/daysGenerated, "Average power per day generated per minute", overallDayAverages/daysGenerated, 
+			# "Total power generated over time", overallPowerGenerated, "Conventional System Used:", conventionalSystem, "Solar System Used")
+		houseDataWriter.writerow([welId, homePostalCodes[welId], len(days), overallPowerGenerated/daysGenerated, overallDayAverages/daysGenerated, overallPowerGenerated, conventionalSystem, homesInstallationType[welId]])
 		inFile.close()
 
 

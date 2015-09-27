@@ -254,9 +254,35 @@ export default Ember.Service.extend({
      }
     ];
 
+    // this.set('id', id);
+    // this.set('lat', lat);
+    // this.set('lng', lng);
+    // this.set('elevation', elevation);
+    // this.set('postalCode', postalCode);
+    // this.set('size', size);
+    // this.set('age', age);
+    // this.set('azimuth', azimuth);
+    // this.set('roofPitch', roofPitch);
+    // this.set('savings', savings);
+    // this.set('powerGeneratedOverTime', powerGeneratedOverTime);
+    // this.set('conventionalSystem', conventionalSystem);
+    // this.set('systemType', systemType);
+    // this.set('installationType', installationType);
+    // this.set('averageSolarPower', averageSolarPower);
+    // this.set('waterConsumption', waterConsumption);
+    // this.set('electricityConsumption', electricityConsumption);
+
+    // "id": "WEL0813",
+    // "postalcode": "B3A",
+    // "daysinuse": 441,
+    // "avgpowerperday": 1000269.8514285722,
+    // "avgpowerperminute": 1406.5710402226841,
+    // "totalpowersincestart": 441119004.4800003,
+    // "conventional": "Oil",
+    // "installation": "Flush mount"
     hData.forEach(function(h){
       var house = new House(
-        123,
+        h.id,
         h.Lat,
         h.Lng,
         Math.floor(Math.random() * 200),
@@ -267,9 +293,9 @@ export default Ember.Service.extend({
         Math.floor(Math.random() * 25),
         Math.floor(Math.random() * 10000),
         Math.floor(Math.random() * 25000),
-        "ABC",
-        "DAA",
-        "Wall",
+        h.conventional,
+        "SB32",
+        h.installation,
         Math.floor(Math.random() * 5000),
         Math.floor(Math.random() * 25000),
         Math.floor(Math.random() * 25000)
