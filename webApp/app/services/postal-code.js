@@ -41,8 +41,8 @@ export default Ember.Service.extend({
     all.forEach(function(code){
       var c = new PostCode(
         code,
-        45,
-        65,
+        44.7050000,
+        -63.6789583,
         Math.floor(Math.random() * 200),
         Math.floor(Math.random() * 200),
         Math.floor(Math.random() * 200),

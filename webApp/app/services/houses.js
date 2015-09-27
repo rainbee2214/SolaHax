@@ -13,8 +13,8 @@ export default Ember.Service.extend({
     for (var i=0; i<48; i++){
       var house = new House(
         123,
-        45,
-        65,
+        44.7050000,
+        -63.6789583,
         Math.floor(Math.random() * 200),
         "B3A",
         Math.floor(Math.random() * 3000),

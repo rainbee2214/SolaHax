@@ -1,4 +1,10 @@
 @import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,900,100,700);
+@import 'gh-buttons';
+
+* {
+  font-family: 'Lato', sans-serif;
+}
 
 html, body {
   height: 100%;
@@ -18,6 +24,7 @@ html, body {
     position: absolute;
     height: 3.75em;
     padding: 0.75em;
+    padding-left: 1em;
     line-height: 2.5em;
     width: 100%;
     border-bottom: 0.0625em solid rgba(0, 0, 0, 0.1);
@@ -33,27 +40,47 @@ html, body {
       position: absolute;
       width: 30%;
       height: 100%;
-      overflow: auto;
 
-      .item {
-        height: 4em;
-        border-bottom: 0.0625em solid rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        &:hover {
-          background: rgba(0, 0, 0, 0.1);
-          border-bottom: 0.0625em solid rgba(0, 0, 0, 0);
-        }
-        &:last-child {
-          border-bottom: 0;
-        }
-      }
+      // .item {
+      //   height: 4em;
+      //   border-bottom: 0.0625em solid rgba(0, 0, 0, 0.1);
+      //   cursor: pointer;
+      //   &:hover {
+      //     background: rgba(0, 0, 0, 0.1);
+      //     border-bottom: 0.0625em solid rgba(0, 0, 0, 0);
+      //   }
+      //   &:last-child {
+      //     border-bottom: 0;
+      //   }
+      // }
 
       .filter {
         position: absolute;
         width: 100%;
         height: 33%;
         top: 0;
+        padding: 1em;
         border-bottom: lightgrey 1px solid;
+        .grid {
+          text-align: justify;
+
+          label {
+              display: inline-block;
+              width: 30%;
+              padding: 1%;
+          }
+
+          /* All but the last 3 boxes */
+          label:nth-last-child(n+5) {
+              margin-bottom: 2%;
+          }
+
+          .break {
+              display: inline-block;
+              width: 30%;
+              height: 0;
+          }
+        }
       }
       .map-details {
         position: absolute;
@@ -61,6 +88,24 @@ html, body {
         height: 67%;
         bottom: 0;
         padding: 1em;
+        overflow: auto;
+
+        .details {
+          &:nth-of-type(2){
+            margin: 15px 0 0 0;
+          }
+
+          p {
+            margin: 0 0 2px 0;
+          }
+
+          h3 {
+            margin: 0 0 5px 0;
+            border-bottom: 1px solid #eee;
+          }
+        }
+
+
       }
     }
     .right {
@@ -84,8 +129,8 @@ html, body {
   }
   .title {
     @include inline-block;
-    background: rgba(0, 0, 0, 0.1);
-    width: 6em;
+    // background: rgba(0, 0, 0, 0.1);
+    // width: 6em;
     height: 1em;
     line-height: 1em;
     margin: 0;
@@ -94,14 +139,23 @@ html, body {
     @include inline-block;
     margin: 0;
     list-style-type: none;
+    padding: 0 2em;
 
     li {
       @include inline-block;
       padding: 0 1em;
       cursor: pointer;
+      vertical-align: top;
+      color: #aaa;
+
+      &:hover {
+        color: #666;
+      }
 
       &.active {
-        background-color: rgba(0,0,0,0.1);
+        // background-color: rgba(0,0,0,0.1);
+        font-weight: bold;
+        color: #333;
       }
     }
   }
@@ -124,9 +178,12 @@ html, body {
 .select-warn-box {
   display: table;
   height: 100%;
+  width: 100%;
 
   .inner {
     display: table-cell;
     vertical-align: middle;
+    text-align: center;
+    color: #ccc;
   }
 }
